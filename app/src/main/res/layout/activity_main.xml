@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:text="@string/translator"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/word"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:hint="@string/word"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/word_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/translation_group"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:checkedButton="@id/translation_eng_to_rus"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/word">
+
+            <RadioButton
+                android:id="@+id/translation_eng_to_rus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eng_rus"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            <RadioButton
+                android:id="@+id/translation_rus_to_eng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rus_eng"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/translate_button"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="80dp"
+            android:padding="16dp"
+            android:text="@string/translate"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/translation_group" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="350dp"
+            app:layout_constraintTop_toBottomOf="@id/translate_button" />
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:background="@color/blue_200"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:background="@color/blue_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:background="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
