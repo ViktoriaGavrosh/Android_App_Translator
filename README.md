@@ -7,7 +7,7 @@ Languages - English, Russian
 
 How to use
 
-- Enter a world
+- Enter a word
 - Select translation mode
 - Click the button
 
