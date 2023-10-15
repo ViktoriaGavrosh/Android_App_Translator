@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, getString(R.string.no_text), Toast.LENGTH_SHORT).show()
             } else {
                 goToGoogle()
+                binding.wordEditText.text = null
             }
         }
     }
